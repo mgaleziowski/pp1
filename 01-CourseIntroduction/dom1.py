@@ -1,7 +1,11 @@
-try:
-    nr=float(input("podaj liczbe "))
-except:
-    print("niepoprawna wartosc ")
+
+while(1>0):
+    try:
+        nr=float(input("podaj liczbe "))
+        break
+    except:
+        print("niepoprawna wartosc ")
+        continue
 if(((nr>=0.0)and(nr<=1.0))==False):
     gr="liczba poza zakresem "
 elif(nr>=0.9):
@@ -17,4 +21,3 @@ elif(nr>=0.5):
 else:
     gr=2.0
 print(gr)
-
