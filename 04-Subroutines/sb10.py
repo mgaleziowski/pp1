@@ -1,6 +1,3 @@
-import re
-
-
 def read_number():
     return int(input(">"))
 

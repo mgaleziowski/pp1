@@ -1,6 +1,3 @@
-from types import resolve_bases
-
-
 def sum(x):
     result=0
     for y in range(1,x+1):
