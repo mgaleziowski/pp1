@@ -2,7 +2,7 @@ import random
 a=[]
 for r in range(10):
     a.append(random.randint(1,10))
-#print(a)
+print(a)
 def bubblesort(a,l):
     for x in range(l):
         for i in range(l-1):
@@ -11,4 +11,4 @@ def bubblesort(a,l):
                 a[i+1]=a[i]
                 a[i]=help
     return a
-#print(bubblesort(a,len(a)))
+print(bubblesort(a,len(a)))
