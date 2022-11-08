@@ -1,8 +1,9 @@
 import random
-import ar18
+import bubble
 a=[]
 for r in range(10):
     a.append(random.randint(1,10))
 print(a)
-b=set(ar18.bubblesort(a,len(a)))
+c=list(set(bubble.bubblesort(a,len(a))))
+b=bubble.bubblesort(c,len(c))
 print(b[len(b)-2])
