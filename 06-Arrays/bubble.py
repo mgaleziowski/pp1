@@ -1,6 +1,6 @@
-def bubblesort(a,l):
-    for x in range(l):
-        for i in range(l-1):
+def bubblesort(a):
+    for x in range(len(a)):
+        for i in range(len(a)-1):
             if(a[i]>a[i+1]):
                 help=a[i+1]
                 a[i+1]=a[i]
