@@ -1,6 +1,3 @@
-from tkinter import Y
-
-
 x=7
 y=34
 z=x
