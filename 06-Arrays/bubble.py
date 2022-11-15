@@ -32,3 +32,40 @@ def bindec(a):
         sum+=b[x]*(2**x)
     return sum
 
+def flip(a):
+    b=[]
+    for i in range(len(a)-1,-1,-1):
+        b.append(a[i])
+    return b
+
+def search(a,b):
+    a=list(str(a))
+    b=str(b)
+    pos=[]
+    for i in range(len(a)):
+        if(a[i]==b):
+            pos.append(i)
+    return pos
+
+def factorial(a):
+    if(a<0):
+        return False
+    if(a==0 or a==1):
+        return 1
+    else:
+        return factorial(a-1)*a
+    
+def arytsum(a,b):
+    if(a>b):
+        return False
+    if(a==b):
+        return a
+    else:
+        return arytsum(a,b-1)+b
+    
+def avg(a):
+    sum=0
+    for i in range(len(a)):
+        sum+=a[i]
+    return sum/len(a)
+
