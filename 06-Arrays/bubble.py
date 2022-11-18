@@ -69,3 +69,18 @@ def avg(a):
         sum+=a[i]
     return sum/len(a)
 
+def primearray(n):
+    a=[]
+    if(n<2):
+        return False
+    for r in range(2,n+1):
+        a.append(r)
+    for i in range(len(a)):
+        if(a[i]>0):
+            j=2
+            while(a[i]*j<=n):
+                a[(a[i]*j)-2]=0
+                j+=1
+    for x in range(a.count(0)):
+        a.remove(0)
+    return a
