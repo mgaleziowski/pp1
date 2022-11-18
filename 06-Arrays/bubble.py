@@ -84,3 +84,35 @@ def primearray(n):
     for x in range(a.count(0)):
         a.remove(0)
     return a
+
+def array2d(a):
+    for x in range(len(a)):
+        for y in range(len(a[x])):
+            a[x][y]=str(a[x][y])
+    for h in range(len(a)):
+        print(" ".join(a[h]))
+        
+def idmatrix(a):
+    b=[]
+    for r in range(a):
+        b.append([])
+        for h in range(a):
+            b[r].append("0")
+    j=0
+    for i in range(a):
+        b[i][j]="1"
+        j+=1
+    return b
+
+def transpose(a):
+    row=len(a)
+    col=len(a[0])
+    b=[]
+    for r in range(col):
+        b.append([])
+        for h in range(row):
+            b[r].append(0)
+    for i in range(row):
+        for j in range(col):
+            b[j][i]=a[i][j]
+    return b
