@@ -1,0 +1,10 @@
+line
+yes
+no
+your
+last
+python
+false
+true
+100
+witch
