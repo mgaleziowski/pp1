@@ -1,5 +1,5 @@
 import re
 
-text="crane, teeth, speaks, dream, creepy"
-x=re.findall("c.{3}e",text)
-print(x)
+text="crane, teeth, speaks, dream, creepy, tracksuit"
+x=re.findall("\w{6,}",text)
+print(len(x))

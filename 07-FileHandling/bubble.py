@@ -69,3 +69,10 @@ def avg(a):
         sum+=a[i]
     return sum/len(a)
 
+def mean(a):
+    a=bubblesort(a)
+    n=len(a)-1
+    if(n%2==1):
+        return (a[n//2]+a[n//2+1])/2
+    else:
+        return a[n//2]

@@ -1,3 +1,8 @@
+def abs(n):
+    if(n<0):
+        return n*(-1)
+    return n
+
 def bubblesort(a):
     for x in range(len(a)):
         for i in range(len(a)-1):
