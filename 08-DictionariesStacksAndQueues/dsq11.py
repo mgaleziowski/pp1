@@ -6,3 +6,4 @@ with open("data.json") as file:
 for i in data:
     for k,v in i.items():
         print(f"{k}:{v}")
+file.close

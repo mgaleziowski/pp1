@@ -1,0 +1,9 @@
+stack=[]
+result=[]
+nr=int(eval(input(">")))
+while(nr>0):
+    stack.append(nr%2)
+    nr//=2
+while(len(stack)>0):
+    result.append(str(stack.pop()))
+print("".join(result))

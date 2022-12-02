@@ -1,0 +1,60 @@
+def alg2rpn(x):
+    char={
+    "0":"number",
+    "1":"number",
+    "2":"number",
+    "3":"number",
+    "4":"number",
+    "5":"number",
+    "6":"number",
+    "7":"number",
+    "8":"number",
+    "9":"number",
+    "+":"operator",
+    "-":"operator",
+    "*":"operator",
+    "/":"operator",
+    "^":"operator",
+    "%":"operator",
+    "(":"open",
+    ")":"close",
+    "=":"end"
+    }
+    prio={
+    "^":1,
+    "%":1,
+    "*":3,
+    "/":2,
+    "+":5,
+    "-":4
+    }
+    x=list(x)
+    result=[]
+    stack=[]
+    for i in range(len(x)):
+        if(char[x[i]]=="number"):
+            result.append(x[i])
+        elif(char[x[i]]=="open"):
+            stack.append(x[i])
+        elif(char[x[i]]=="close"):
+            while(stack[len(stack)-1]!="("):
+                result.append(stack.pop())
+            stack.pop()
+        elif(char[x[i]]=="operator"):
+            if(len(stack)>0): 
+                if(char[stack[len(stack)-1]]=="operator"):
+                    if(prio[stack[len(stack)-1]]<prio[x[i]]):    
+                        while(stack[len(stack)-1]!="("):
+                            result.append(stack.pop())
+                            if(len(stack)==0):
+                                break
+            stack.append(x[i])
+        else:
+            for j in range(len(stack)):
+                result.append(stack[j])
+    return(result)
+    
+
+alg=input(">")
+rpn=alg2rpn(alg)
+print("".join(rpn))

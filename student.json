@@ -1,0 +1,12 @@
+{
+    "imie": "Mikolaj",
+    "nazwisko": "Galeziowski",
+    "wiek": 19,
+    "przedmioty": [
+        "matematyka",
+        "informatyka",
+        "angielski",
+        "niemiecki",
+        "zarzadzanie"
+    ]
+}
