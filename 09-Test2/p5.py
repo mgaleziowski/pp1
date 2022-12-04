@@ -5,16 +5,9 @@ def f(first,last):
     command[2]=first
     command[6]=last
     command="".join(command)
-    with open("test.txt","r") as file:
+    with open("test.txt","r",encoding="UTF_8") as file:
         text=file.read()
     find=re.findall(command,text)
-    return len(find)
+    return find
 
-def f2(first,last,text):
-    import re
-    command=r'\bf\w*l\b'
-    command=list(command)
-    command[2]=first
-    command[6]=last
-    command="".join(command)
-    return re.findall(command,text)
+print(f("w","d"))
